@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="dashboard.js"></script>  
+    <style>
+    #message{
+        max-width: 65%;
+    }
+    .drop-down{
+           position: absolute;
+            background-color: rgb(248, 246, 246);
+            padding: 15px 50px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+            display: none;
+           
+            
+        }
+    .drop-down li{
+    list-style: none;
+    }
+    .drop-down li a{
+    text-decoration: none;
+    color: black;
+    }
+    #profile:hover .drop-down{
+            display: block;
+        }
+       @media (max-width: 768px) {
+ #message {
+    max-width:100%;
+  }
+}
+    </style>
+</head>
+<body>   
+<div class="container-fluid bg-light">
+    <div class="row">
+        <div class="col-sm-4 bg-white shadow p-2" >
+            <h3 class="text-center text-primary ">Golden Chat Dashboard</h3>
+            <div class="input-group mb-4 mt-5 bg-white shadow">
+                <input type="search" name="dashboard_search" id="" placeholder="Search chat" class="form-control">
+            </div> 
+            <hr>
+               <div class="container p-2 shadow bg-light">
+                  <div class="container d-flex justify-content-between align-items-center mb-2">
+                        <img src="passport.png" alt="" style="width: 20%;height: 20%;" class="rounded">
+                    <div class="container">
+                        <p class="text-left">IMBEREYEMASO Docile</p>
+                        <p class="text-left text-secondary">Recent message</p>
+                    </div>
+                  </div>
+                  <div class="container d-flex justify-content-between align-items-center mb-2">
+                    <img src="passport.png" alt="" style="width: 20%;height: 20%;" class="rounded">
+                <div class="container">
+                    <p class="text-left">IMBEREYEMASO Docile</p>
+                    <p class="text-left text-secondary">Recent message</p>
+                </div>
+              </div>
+
+               </div>
+        </div>
+          <div class="col-sm-8" style="min-height:  100vh;">
+                <div class="container-fluid p-2 d-flex justify-content-between align-items-center bg-white mb-3 shadow">
+                 <h4 class="text-left text-secondary">Message Chat</h4>
+                    <div class="p-2">
+                   <span class="text-success font-weight-bold" id="profile">
+                        My Profile
+                       <div  class="drop-down">
+                            <li><a href="setting.html">Setting</a></li>
+                            <li><a href="#web">Logout</a></li>
+                        </div> 
+                    </span>
+                    <span class="text-secondary font-weight-bold">Notification</span>
+                </div>    
+            </div>
+                
+                          <div class="container bg-light shadow mb-3" style="max-width: 70%;float: left;">
+                              <p class="text-center text-dark">Docile</p>
+                              <p class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quia?</p>
+                           </div>  
+                       <div class="container bg-white shadow " style="max-width: 70%;float: right;">
+                        <p class="text-center text-dark">Docile QQQ</p>
+                        <p class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quia?</p>
+                     </div>
+                
+           
+            <div class="container-fluid bg-white p-3 rounded" style="position: fixed;bottom: 0;" id="message">
+                <form action="#">
+                    <div class="input-group mb-3 ">
+                        <textarea name="message" class="form-control w-50" placeholder="Type your message"></textarea>
+                        <div class="input-group-append">
+                          <button type="submit" class="btn btn-success">SEND</button>
+                        </div>
+                      </div>
+                </form>
+            </div>     
+          </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
